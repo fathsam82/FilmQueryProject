@@ -83,6 +83,7 @@ public class FilmQueryApp {
 			case "3":
 				System.out.println("You have quit the program. Thank you for your searches.");
 				running = false;
+				break;
 				default:
 					System.out.println("Invalid selection");
 
