@@ -8,19 +8,15 @@ public class Actor {
 	private String firstName;
 	private String lastName;
 	private List<Film> films;
-	
-	
-	
+
 	public Actor() {
-		}
-	
-	
+	}
+
 	public Actor(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-
 
 	public Actor(int id, String firstName, String lastName) {
 		super();
@@ -28,47 +24,48 @@ public class Actor {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
 	public List<Film> getFilms() {
 		return films;
 	}
-
 
 	public void setFilms(List<Film> films) {
 		this.films = films;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Actor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", films=" + films + "]";
+		return firstName + " " + lastName;
 	}
-
 
 	@Override
 	public int hashCode() {
 		return Objects.hash(firstName, id, lastName);
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -81,12 +78,5 @@ public class Actor {
 		Actor other = (Actor) obj;
 		return Objects.equals(firstName, other.firstName) && id == other.id && Objects.equals(lastName, other.lastName);
 	}
-	
-
-
-
-
-
-
 
 }

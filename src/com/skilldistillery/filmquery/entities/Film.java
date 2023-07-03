@@ -1,5 +1,6 @@
 package com.skilldistillery.filmquery.entities;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Film {
@@ -14,13 +15,17 @@ public class Film {
 	private String rating;
 	private String features;
 	private int languageId;
+	private List<Actor> actors;
+	private String languageName;
+	
+	
 
 	public Film() {
 
 	}
 
 	public Film(int id, String title, String desc, int releaseYear, int rentDur, double rate, int length,
-			double repCost, String rating, String features) {
+			double repCost, String rating, String features, String languageName) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -32,7 +37,10 @@ public class Film {
 		this.replacementCost = repCost;
 		this.rating = rating;
 		this.features = features;
+		this.languageName = languageName;
+		
 	}
+
 	public Film(int id, String title, String desc, int releaseYear, int rentDur, double rate, int length,
 			double repCost, String rating, String features, int languageId) {
 		super();
@@ -47,6 +55,14 @@ public class Film {
 		this.rating = rating;
 		this.features = features;
 		this.languageId = languageId;
+	}
+
+	public String getLanguageName() {
+		return languageName;
+	}
+
+	public void setLanguageName(String languageName) {
+		this.languageName = languageName;
 	}
 
 	public int getLanguageId() {
@@ -136,6 +152,13 @@ public class Film {
 	public void setFeatures(String features) {
 		this.features = features;
 	}
+	public List<Actor> getActors() {
+		return actors;
+	}
+	
+	public void setActors(List<Actor> actors) {
+		this.actors = actors;
+	}
 
 	@Override
 	public String toString() {
@@ -167,7 +190,6 @@ public class Film {
 				&& Objects.equals(title, other.title);
 	}
 
-	
 
-	
+
 }
